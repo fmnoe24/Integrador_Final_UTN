@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="justify-content-center align-content-center">
+            <table class="table table-info table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th colspan="8" class="text-center">
+                            <a href="/agregarItem"><button class="btn btn-primary">Agregar</button></a>
+                        </th>
+                    </tr>
+                    <tr class="text-center">
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Duracion</th>
+                        <th scope="col">Disponible</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {{#each data}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{nombre}}</td>
+                        <td>{{descripcion}}</td>
+                        <td>{{duracion}}Hs</td>
+                        <td>{{disponible}}</td>
+                        <td>${{precio}}</td>
+                        <td><img src="{{imgURL}}" alt="{{nombre}}"></td>
+                        <td class="text-center">
+                            <a href="/editarItem/{{id}}"><button class="btn btn-sm btn-warning my-1">Editar</button></a>
+                            <a href="/editarItem/{{id}}"><button class="btn btn-sm btn-danger">Borrar</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>

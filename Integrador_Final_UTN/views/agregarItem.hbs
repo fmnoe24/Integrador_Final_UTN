@@ -1,0 +1,38 @@
+<div class="container">
+    <h1 class="text-center my-4">Formulario para Agregar un Producto</h1>
+</div>
+
+<div class="container fw-bold">
+    <div class="row">
+        <form action="/agregarItem" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="3"></textarea>
+            </div>  
+            <div class="mb-3">
+                <label for="image" class="form-label">Imagen</label>
+                <input type="file" class="form-control" id="image" name="image">
+            </div>  
+            <div class="mb-3">
+                <label for="duracion" class="form-label">Duración</label>
+                <input type="text" class="form-control" id="duracion" name="duracion">
+            </div>
+            <div class="mb-3">
+                <label for="disponible" class="form-label">Disponible</label>
+                <input type="text" class="form-control" id="disponible" name="disponible">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio">
+            </div>
+            <div class="text-center my-2">
+            <button type="submit" class="btn btn-success">Agregar</button>
+            <a href="/listado"><input type="button" value="Cancelar" class="btn btn-secondary"></a>
+            </div>
+        </form>
+    </div>
+</div>

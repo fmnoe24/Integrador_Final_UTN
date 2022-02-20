@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<div class="container">
+    <h1 class="text-center my-4">Formulario para Editar un Producto</h1>
+</div>
+
+<div class="container fw-bold">
+    <div class="row">
+        <form action="/editarItem" method="post" enctype="multipart/form-data">
+            <input type="text" value="{{producto.id}}" name="id" hidden>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{producto.nombre}}">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="3" maxlength="300">{{producto.descripcion}}</textarea>
+            </div>
+            <input type="text" value="{{producto.image}}" name="ImgActual" hidden> <!--Carga la Img actual en caso que no carguen una nueva-->
+            <div class="mb-3">
+                <label for="image" class="form-label">Imagen</label>
+                <input type="file" class="form-control" id="image" name="image">
+            </div>  
+            <div class="mb-3">
+                <label for="duracion" class="form-label">Duración</label>
+                <input type="text" class="form-control" id="duracion" name="duracion" value="{{producto.duracion}}">
+            </div>
+            <div class="mb-3">
+                <label for="disponible" class="form-label">Disponible</label>
+                <input type="text" class="form-control" id="disponible" name="disponible" value="{{producto.disponible}}">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" name="precio" value="{{producto.precio}}">
+            </div>
+            <div class="text-center my-2">
+            <button type="submit" class="btn btn-warning">Cambiar</button>
+            <a href="/eliminarProducto/{{producto.id}}"><input type="button" value="Borrar" class="btn btn-danger"></a>
+            <a href="/listado"><input type="button" value="Cancelar" class="btn btn-secondary"></a>
+            </div>
+        </form>
+    </div>
+</div>

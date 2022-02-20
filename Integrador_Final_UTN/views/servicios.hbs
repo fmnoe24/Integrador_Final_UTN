@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="row">
+        {{#each data}}
+        <div class="col-12 col-lg-4 col-md-6 my-5">
+            <div class="card">
+                <img src="{{imgURL}}" alt="{{nombre}}" class="card-img-top" >
+                <div class="card-body mb-2 bg-light">
+                    <h2 class="card-title text-center h5 mb-4 mt-2">{{nombre}}</h2>
+                    <p>{{descripcion}}</p>
+                    <p><span class="fw-bold">Disponible:</span> {{disponible}}.</p>
+                    <p><span class="fw-bold">Duración:</span>{{duracion}} Hs.</p>
+                    <p class="card-title text-center h4">${{precio}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

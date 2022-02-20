@@ -1,0 +1,110 @@
+
+.img-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    line-height: 0;
+  }
+
+.texto {
+    font-size: 2em;
+  }
+.op:hover {
+    opacity: 80%;
+}
+
+.img-logo{
+    display: inline-block;
+    max-width: 25%;
+}
+
+.carousel .carousel-item {
+    transition-property: transform;
+    transition-duration: 0.9s;
+}
+
+.carrusel{
+    height: 50%;
+}
+.borde {
+    border: 1px solid black;
+}
+
+
+.color {
+    background-color: #406981;;
+}
+.color2 {
+    background-color: #89d160;
+}
+.color3{
+    background-color: #858585;
+}
+
+/*Galería Imagenes - Turismo*/
+#gal .col-lg-4 {
+    margin: 0 !important;
+    padding: 1em;
+}
+#gal img {
+    width: 100%;
+}
+#gal img:hover{
+    border: 4px solid #ffffff;
+}
+/**/
+
+/*Carrousel noticias Index*/
+.carousel-indicators {
+    margin-bottom: 30px;
+ }
+ .carousel-indicators [data-bs-target]  {
+     width: 15px;
+     height: 15px;
+     border: none;
+     border-radius: 50%;
+     background: #89d160;
+ }
+ 
+ .carousel-indicators .active {
+     background: #5db42a;
+ }
+ .carousel-caption {
+     background: rgba(0, 0, 0, .5);
+ }
+/**/
+
+@media screen and (min-width: 768px){
+    .logo {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 576px){
+
+    .logo {
+        width: 80%;
+    }
+    .alto {
+        text-align: center;
+        height: 100px;
+    }
+}
+@media screen and (max-width:300px){
+    
+    .carousel-indicators [data-bs-target]  {
+        width: 10px;
+        height: 10px;
+    }
+}
+@media screen and (min-width: 100px){
+    .logos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+    .logo {
+        width: 20%;
+    }
+
+}
